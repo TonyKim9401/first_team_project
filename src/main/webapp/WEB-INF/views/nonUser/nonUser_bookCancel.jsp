@@ -31,7 +31,11 @@
 		</div>
 		<div class="payment-info">
 			<div>
-				<label>결제일시(예약날짜)${bdto.book_num}</label>
+				<label>예약번호</label>
+				<label>${bdto.book_num}</label>
+			</div>
+			<div>
+				<label>결제일시(예약날짜)</label>
 				<label>${bdto.book_joindate}</label>
 			</div>
 			<div>
