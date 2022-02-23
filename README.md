@@ -1,2 +1,2 @@
 # first_team_project
-from ezen academy, the very first team project
+From ezen academy, the very first team project I'd parcitipated.
