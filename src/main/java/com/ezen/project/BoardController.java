@@ -237,10 +237,19 @@ public class BoardController {
 		
 		List<UserQnADTO> list = null;
 		
+		
 		if(loginOkBean.getA_level().equals("3")) {
 			list = qnaBoardMapper.listAdminUserQnA(startRow, endRow);
 		}else {
 			list = qnaBoardMapper.listUserQnA(loginOkBean.getU_num());
+		}
+		
+		//글 번호 순서
+		int orderNumber = 0;
+		if(loginOkBean.getA_level().equals("3")) {
+			orderNumber = rowCount;
+		}else {
+			orderNumber = qnaBoardMapper.getUserQnACount(loginOkBean.getU_num());
 		}
 		
 		for(UserQnADTO uqadto : list) {
@@ -273,6 +282,7 @@ public class BoardController {
 		
 		req.setAttribute("listUserQnA", list);
 		req.setAttribute("rowCount", rowCount);
+		req.setAttribute("orderNumber", orderNumber);
 		req.setAttribute("linkSize", linkSize);
 		req.setAttribute("pageCount", pageCount);
 		req.setAttribute("startPage", startPage);

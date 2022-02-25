@@ -37,15 +37,13 @@
 		<td width="85%">${loginOkBean.u_nickname}</td>
 	</tr>
 	<tr>
-		<td bgcolor="lightgrey" align="center" width="15%">제 목</td>
+		<td bgcolor="lightgrey" align="center" width="15%" placeholder="제목을 입력 해 주세요">제 목</td>
 		<td width="85%"><input type="text" name="uqa_subject" size="65"></td>
 	</tr>
 	<tr>
 		<td bgcolor="lightgrey" align="center" width="15%">내 용</td>
 		<td width="85%">
-			<textarea name="uqa_contents" cols="65" rows="12">
-				param.u_num_parent:${param.u_num_parent}, loginOkBean.u_num:${loginOkBean.u_num}
-			</textarea>
+			<textarea name="uqa_contents" cols="65" rows="12" placeholder="내용을 입력 해 주세요"></textarea>
 		</td>
 	</tr>
 	<tr>

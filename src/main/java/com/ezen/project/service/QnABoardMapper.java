@@ -145,5 +145,6 @@ public class QnABoardMapper {
 	public String getUnicknameByUnum(int u_num) {
 		return sqlSession.selectOne("getUnicknameByUnum", u_num);
 	}
+
 	
 }

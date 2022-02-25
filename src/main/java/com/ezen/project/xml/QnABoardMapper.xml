@@ -51,12 +51,15 @@
 	</select>
 	
 	<select id="listUserQnA" resultType="UserQnADTO" parameterType="int">
-		select * from project_userQnA where u_num_parent=#{u_num} or u_num=#{u_num} order by uqa_re_step asc
+		select * from project_userQnA where 
+		u_num_parent=#{u_num} or u_num=#{u_num} order by uqa_re_step asc
 	</select>
 	
 	<select id="getAdminUserQnACount" resultType="int">
 		select count(*) from project_userQnA
 	</select>
+	
+
 	
 	<select id="getUserQnACount" resultType="int">
 		select count(*) from project_userQnA where u_num_parent=#{u_num} or u_num=#{u_num}

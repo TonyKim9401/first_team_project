@@ -33,9 +33,12 @@
 		<td colspan="6">등록된 게시글이 없습니다.</td>
 	</tr>		
 	</c:if>
+	<c:set var="orderNumber" value="${orderNumber}"/>
 	<c:forEach var="uqadto" items="${listUserQnA}">
 	<tr>
-		<td align="center">${uqadto.uqa_num}</td>
+		<%-- <td align="center">${uqadto.uqa_num}</td> --%>
+		<td align="center">${orderNumber}</td>
+		<c:set var="orderNumber" value="${orderNumber - 1}"/>
 		<td>
 			<c:if test="${uqadto.uqa_re_level>0}">
 			<img src="resources/images/level.gif" width="${uqadto.uqa_re_level*10}">
